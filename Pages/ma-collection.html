@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../asset/css/lux.css">
+    <link rel="stylesheet" href="./../asset/css/style.css">
+    <link rel="stylesheet" href="./../asset/css/base.css">
+    <title>VOIRANIME - Ma collection</title>
+</head>
+<body>
+  <nav>
+      <!-- Barre de navigation statique -->
+      <nav class="navbar navbar-expand-lg navbar-dark" id="nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" id="titre" href="../index.html">VoirAnime</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./mon-profil.html">Mon Profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./ma-collection.html">Ma Collection</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./inscription.html">Inscription</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./connexion.html">Connexion</a>
+              </li>
+            </ul>
+            <form class="d-flex" onsubmit="searchAnime(event)">
+              <input id="search-text" class="form-control bg-transparent text-white me-2" type="search" placeholder="Search" autocomplete="off">
+              <button id="btn" class="btn rounded-3" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Fin de la barre de navigation -->
+    </nav>
+
+    <div class="wrapper">
+        <h2><strong>Mes favoris</strong></h2>
+        <div class="cards" id="favorites-container">
+            <!-- Les favoris seront affichés ici -->
+        </div>
+    </div>
+</body>
+</html>
