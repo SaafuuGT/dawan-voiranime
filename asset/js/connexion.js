@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Vérifier les informations de connexion
                 if (user.email === email && user.password === password) {
+                    localStorage.setItem('connected', JSON.stringify(true))
                     // Rediriger vers la page de profil ou autre action
                     window.location.href = './mon-profil.html';
                 } else {

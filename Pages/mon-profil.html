@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./../asset/css/lux.css">
     <link rel="stylesheet" href="./../asset/css/style.css">
     <link rel="stylesheet" href="./../asset/css/base.css">
+    <link rel="stylesheet" href="./../asset/css/profil.css">
     <title>VOIRANIME - Mon Profil</title>
 </head>
 <body>
@@ -33,8 +34,11 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./inscription.html">Inscription</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="btn-co">
                   <a class="nav-link" href="./connexion.html">Connexion</a>
+                </li>
+                <li class="nav-item" id="btn-deco" style="display:none">
+                  <a class="nav-link" href="./index.html">Déconnexion</a>
                 </li>
               </ul>
               <form class="d-flex" onsubmit="searchAnime(event)">
@@ -50,9 +54,14 @@
         <h2><strong>Mon profil</strong></h2>
         <div class="container mt-5" id="profile-container">
             <!-- Profil utilisateur affiché ici -->
+            <div id="profile-picture"></div>
+            <div id="profile-username"></div>
+            <div id="profile-email"></div>
         </div>
     </div>
 
     <script src="./../asset/js/mon-profil.js"></script>
+    <script src="../asset/js/deconnexion.js"></script>
+
 </body>
 </html>

@@ -35,8 +35,11 @@
             <li class="nav-item">
               <a class="nav-link" href="./Pages/inscription.html">Inscription</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="btn-co">
               <a class="nav-link" href="./Pages/connexion.html">Connexion</a>
+            </li>
+            <li class="nav-item" id="btn-deco" style="display:none">
+              <a class="nav-link" href="./index.html">Déconnexion</a>
             </li>
           </ul>
           <form class="d-flex" onsubmit="searchAnime(event)">
@@ -98,74 +101,6 @@
       <!-- Tous les animes seront affichés ici -->
     </div>
   </div>
+  <script src="asset/js/deconnexion.js"></script>
 
-  <!-- <script>
-    // Simulation des données de la base de données
-    const animes = [
-      // Ajoutez ici vos données d'anime
-      { id: 1, img: 'anime1.jpg', titre: 'Anime 1', description: 'Description de l\'anime 1' },
-      { id: 2, img: 'anime2.jpg', titre: 'Anime 2', description: 'Description de l\'anime 2' },
-      // Ajoutez d'autres animes ici
-    ];
-
-    const bigs3 = [
-      { id: 1, img: 'anime1.jpg', titre: 'Anime 1' },
-      { id: 48, img: 'anime48.jpg', titre: 'Anime 48' },
-      { id: 49, img: 'anime49.jpg', titre: 'Anime 49' },
-    ];
-
-    // Stocker les données dans localStorage
-    localStorage.setItem('animes', JSON.stringify(animes));
-    localStorage.setItem('bigs3', JSON.stringify(bigs3));
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const big3Cards = document.getElementById('big3-cards');
-      const allAnimeCards = document.getElementById('all-anime-cards');
-
-      // Afficher les big 3 animes
-      bigs3.forEach(anime => {
-        const card = document.createElement('a');
-        card.href = `showAnime.html?id_anime=${anime.id}`;
-        card.innerHTML = `
-          <figure class="card">
-            <img src="./asset/img/${anime.img}" alt="${anime.titre}" />
-          </figure>
-        `;
-        big3Cards.appendChild(card);
-      });
-
-      // Afficher tous les animes
-      animes.forEach(anime => {
-        const card = document.createElement('a');
-        card.href = `showAnime.html?id_anime=${anime.id}`;
-        card.innerHTML = `
-          <figure class="card">
-            <img src="./asset/img/${anime.img}" alt="${anime.titre}" />
-          </figure>
-        `;
-        allAnimeCards.appendChild(card);
-      });
-    });
-
-    function searchAnime(event) {
-      event.preventDefault();
-      const searchText = document.getElementById('search-text').value.toLowerCase();
-      const filteredAnimes = animes.filter(anime => anime.titre.toLowerCase().includes(searchText));
-      const allAnimeCards = document.getElementById('all-anime-cards');
-
-      // Vider les cartes existantes
-      allAnimeCards.innerHTML = '';
-
-      // Afficher les animes filtrés
-      filteredAnimes.forEach(anime => {
-        const card = document.createElement('a');
-        card.href = `showAnime.html?id_anime=${anime.id}`;
-        card.innerHTML = `
-          <figure class="card">
-            <img src="./asset/img/${anime.img}" alt="${anime.titre}" />
-          </figure>
-        `;
-        allAnimeCards.appendChild(card);
-      });
-    }
-  </script> -->
+  <script src="asset/js/index.js"></script>
