@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./asset/css/lux.css">
+  <link rel="stylesheet" href="./asset/css/style.css">
+  <link rel="stylesheet" href="./asset/css/base.css">
+  <title>Anime Details</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" id="nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="titre" href="../index.html">VoirAnime</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./mon-profil.html">Mon Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ma-collection.html">Ma Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./inscription.html">Inscription</a>
+          </li>
+          <li class="nav-item" id="btn-co">
+            <a class="nav-link" href="./connexion.html">Connexion</a>
+          </li>
+          <li class="nav-item" id="btn-deco" style="display:none">
+            <a class="nav-link" href="../index.html">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img id="anime-image" class="img-fluid" alt="Anime Image">
+      </div>
+      <div class="col-md-8">
+        <h1 id="anime-title"></h1>
+        <p id="anime-synopsis"></p>
+        <a id="anime-video-link" href="#" target="_blank" class="btn btn-primary">Watch Video</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="../asset/js/show-anime.js"></script>
+  <script src="../asset/js/deconnexion.js"></script>
+
+</body>
+</html>

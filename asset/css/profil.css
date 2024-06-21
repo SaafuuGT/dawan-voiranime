@@ -1,0 +1,24 @@
+.profile-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    margin-bottom: 10px;
+}
+
+.profile-info strong {
+    color: #007bff; /* Couleur principale de bootstrap */
+}
+
+.profile-username,
+.profile-email {
+    font-size: 1.2em;
+}

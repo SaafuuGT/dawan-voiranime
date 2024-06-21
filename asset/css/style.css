@@ -106,8 +106,8 @@
   .cards .card,
   .news .card {
     margin: 20px;
-    width: 180px;
-    height: 270px;
+    width: 170px;
+    height: 280px;
     overflow: hidden;
     box-shadow: 0 5px 10px rgba(0,0,0,0.8);
     transform-origin: center top;
