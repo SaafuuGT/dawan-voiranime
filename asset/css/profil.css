@@ -1,13 +1,38 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .profile-container {
     text-align: center;
     margin-top: 50px;
 }
 
-.profile-picture img {
+.card {
+    max-width: 700px;
+    border: none; /* Suppression de la bordure pour un look plus moderne */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée pour un effet moderne */
+    border-radius: 15px;
+    background-color: #343a40; /* Couleur de fond sombre */
+    overflow: hidden; /* Assure que le contenu reste dans les limites arrondies */
+}
+
+.card .card-body {
+    padding: 2rem;
+}
+
+.profile-picture {
+    padding: 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1); /* Légère séparation entre image et contenu */
+}
+
+#profile-picture {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+    border-radius: 50%; /* Forme circulaire pour l'image de profil */
+    background-color: #6c757d; /* Couleur de fond de l'image de profil */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-info {
@@ -15,10 +40,16 @@
 }
 
 .profile-info strong {
-    color: #007bff; /* Couleur principale de bootstrap */
+    color: #007bff;
 }
 
-.profile-username,
-.profile-email {
+#profile-username,
+#profile-email {
     font-size: 1.2em;
+    color: #fff;
+}
+
+h5.card-title {
+    color: #007bff;
+    margin-bottom: 1rem; /* Ajoute un espace en bas du titre */
 }

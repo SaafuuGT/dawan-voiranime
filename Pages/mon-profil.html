@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../asset/css/lux.css">
     <link rel="stylesheet" href="./../asset/css/style.css">
     <link rel="stylesheet" href="./../asset/css/base.css">
@@ -11,57 +12,67 @@
     <title>VOIRANIME - Mon Profil</title>
 </head>
 <body>
-    <nav>
-        <!-- Barre de navigation statique -->
-        <nav class="navbar navbar-expand-lg navbar-dark" id="nav">
+  <nav>
+      <!-- Barre de navigation statique -->
+      <nav class="navbar navbar-expand-lg navbar-dark" id="nav">
           <div class="container-fluid">
-            <a class="navbar-brand" id="titre" href="../index.html">VoirAnime</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-              aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor01">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Accueil</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./mon-profil.html">Mon Profil</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./ma-collection.html">Ma Collection</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./inscription.html">Inscription</a>
-                </li>
-                <li class="nav-item" id="btn-co">
-                  <a class="nav-link" href="./connexion.html">Connexion</a>
-                </li>
-                <li class="nav-item" id="btn-deco" style="display:none">
-                  <a class="nav-link" href="./index.html">Déconnexion</a>
-                </li>
-              </ul>
-              <form class="d-flex" onsubmit="searchAnime(event)">
-                <input id="search-text" class="form-control bg-transparent text-white me-2" type="search" placeholder="Search" autocomplete="off">
-                <button id="btn" class="btn rounded-3" type="submit">Search</button>
-              </form>
-            </div>
+              <a class="navbar-brand" id="titre" href="../index.html">VoirAnime</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                  aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                  <ul class="navbar-nav me-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="../index.html">Accueil</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./mon-profil.html">Mon Profil</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./ma-collection.html">Ma Collection</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./inscription.html">Inscription</a>
+                      </li>
+                      <li class="nav-item" id="btn-co">
+                          <a class="nav-link" href="./connexion.html">Connexion</a>
+                      </li>
+                      <li class="nav-item" id="btn-deco" style="display:none">
+                          <a class="nav-link" href="./index.html">Déconnexion</a>
+                      </li>
+                  </ul>
+                  <form class="d-flex" onsubmit="searchAnime(event)">
+                      <input id="search-text" class="form-control bg-transparent text-white me-2" type="search"
+                          placeholder="Search" autocomplete="off">
+                      <button id="btn" class="btn rounded-3" type="submit">Search</button>
+                  </form>
+              </div>
           </div>
-        </nav>
-        <!-- Fin de la barre de navigation -->
       </nav>
-    <div class="wrapper">
-        <h2><strong>Mon profil</strong></h2>
-        <div class="container mt-5" id="profile-container">
-            <!-- Profil utilisateur affiché ici -->
-            <div id="profile-picture"></div>
-            <div id="profile-username"></div>
-            <div id="profile-email"></div>
-        </div>
-    </div>
+      <!-- Fin de la barre de navigation -->
+  </nav>
+  <div class="wrapper">
+      <h2 class="text-center"><strong>Mon profil</strong></h2>
+      <div class="container mt-5 d-flex justify-content-center profile-container" id="profile-container">
+          <div class="card text-white mb-3" id="profile-card">
+              <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center justify-content-center profile-picture">
+                    <div id="profile-picture" class="p-3"></div>
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title" id="profile-username"></h5>
+                          <p class="card-text" id="profile-email"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-    <script src="./../asset/js/mon-profil.js"></script>
-    <script src="../asset/js/deconnexion.js"></script>
-
+  <script src="./../asset/js/mon-profil.js"></script>
+  <script src="../asset/js/deconnexion.js"></script>
 </body>
+
 </html>
