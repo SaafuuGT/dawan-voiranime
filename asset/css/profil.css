@@ -1,12 +1,3 @@
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-.profile-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
 .card {
     max-width: 700px;
     border: none; /* Suppression de la bordure pour un look plus moderne */
