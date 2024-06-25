@@ -1,14 +1,14 @@
 .card {
-    max-width: 700px;
+    max-width: 100%;
     border: none; /* Suppression de la bordure pour un look plus moderne */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée pour un effet moderne */
+    box-shadow: 0 2px 5px rgb(252, 252, 252); /* Ombre plus prononcée pour un effet moderne */
     border-radius: 15px;
     background-color: #343a40; /* Couleur de fond sombre */
     overflow: hidden; /* Assure que le contenu reste dans les limites arrondies */
 }
 
 .card .card-body {
-    padding: 2rem;
+    padding: 4rem;
 }
 
 .profile-picture {
@@ -42,5 +42,17 @@
 
 h5.card-title {
     color: #007bff;
-    margin-bottom: 1rem; /* Ajoute un espace en bas du titre */
+    margin-bottom: 0.5rem; /* Ajoute un espace en bas du titre */
+}
+
+.card-text {
+    color: #fff;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
 }

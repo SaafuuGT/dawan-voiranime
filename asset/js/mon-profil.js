@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const profileContainer = document.getElementById('profile-container');
     const profileCard = document.getElementById('profile-card');
+    const favoriteCardsContainer = document.getElementById('favorite-cards');
 
     // Récupérer les données utilisateur du localStorage
     const storedUser = localStorage.getItem('user');
     const storeConnected = localStorage.getItem('connected');
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     const connected = JSON.parse(storeConnected);
 
@@ -21,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         profileEmail.innerHTML = `<p><strong>Email:</strong> ${user.email}</p>`;
 
         profileCard.style.display = 'block';
+
+        // Afficher les favoris
+        fetchFavorites(storedFavorites, favoriteCardsContainer);
     } else {
         profileCard.style.display = 'none';
         
@@ -33,3 +38,31 @@ document.addEventListener('DOMContentLoaded', () => {
         profileContainer.appendChild(noUserMessage);
     }
 });
+
+function fetchFavorites(favorites, container) {
+    favorites.forEach(animeId => {
+        fetch(`https://kitsu.io/api/edge/anime/${animeId}`)
+            .then(response => response.json())
+            .then(data => {
+                const anime = data.data;
+                const card = createFavoriteCard(anime);
+                container.appendChild(card);
+            })
+            .catch(error => console.error('Error fetching favorite anime:', error));
+    });
+}
+
+function createFavoriteCard(anime) {
+    const card = document.createElement('div');
+    card.classList.add('col-md-4', 'mb-2'); // 4 cards per row
+
+    card.innerHTML = `
+        <div class="card h-100">
+            <a href="../Pages/show-anime.html?id_anime=${anime.id}" class="stretched-link">
+                <img src="${anime.attributes.posterImage.small}" class="card-img-top" alt="${anime.attributes.canonicalTitle}">
+            </a>
+        </div>
+    `;
+
+    return card;
+}
